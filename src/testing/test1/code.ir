@@ -1,0 +1,80 @@
+	PUSH $END
+LABEL main
+	POP
+	STORE $T1 "CreeperBuddy"
+	STORE $T2 "next"
+	FORMAT $T0 [$T1 $T2]
+	STORE player_GLOBAL $T0
+	STORE $T4 "ENEMY_"
+	FORMAT $T3 [$T4]
+	STORE opponent_main $T3
+	STORE $T5 53
+	STORE $T6 7
+	ADDI $T7 $T5 $T6
+	STORE x_GLOBAL $T7
+	STORE $T8 2
+	DIVI $T9 x_GLOBAL $T8
+	STORE y_GLOBAL $T9
+	MULI $T10 x_GLOBAL x_GLOBAL
+	STORE $T11 4.7
+	MULF $T12 $T10 $T11
+	SUBF $T13 y_GLOBAL $T12
+	STORE z_GLOBAL $T13
+	MULI $T14 x_GLOBAL y_GLOBAL
+	MULF $T15 $T14 z_GLOBAL
+	STORE t1_main $T15
+	STORE $T16 225
+	STORE temp_main $T16
+	STORE $T17 5
+	MULF $T18 t1_main $T17
+	STORE t2_main $T18
+	STORE $T20 "kill @e"
+	ADDF $T21 t1_main t2_main
+	FORMAT $T19 [$T20 $T21]
+	CMD $T19
+LABEL $L0
+	STORE $T22 20
+	BLEF temp_main $T22 $L1
+	STORE $T23 2
+	DIVF $T24 t2_main $T23
+	SUBF $T25 t2_main $T24
+	STORE temp_main $T25
+	JUMP $L0
+LABEL $L1
+LABEL $L3
+	BLEF t1_main t2_main $L4
+	STORE $T27 "say t1 > t2"
+	STORE $T28 "natalie rossello"
+	FORMAT $T26 [$T27 $T28]
+	CMD $T26
+	JUMP $L2
+LABEL $L4
+	BNEF t1_main t2_main $L5
+LABEL $L6
+	BGEF t1_main t2_main $L7
+	STORE $T29 1
+	ADDF $T30 t1_main $T29
+	STORE t1_main $T30
+	JUMP $L6
+LABEL $L7
+	STORE $T32 "say t1 == t2"
+	FORMAT $T31 [$T32]
+	CMD $T31
+	JUMP $L2
+LABEL $L5
+	STORE $T34 "say idit"
+	STORE $T35 "DUMB\""
+	STORE $T36 "ILLEGAL ARGS"
+	FORMAT $T33 [$T34 x_GLOBAL $T35 player_GLOBAL $T36]
+	CMD $T33
+	JUMP $L2
+LABEL $L2
+	STORE $T37 5
+	STORE $RET $T37
+	JR
+LABEL otherFunc
+	POP [y1_otherFunc x1_otherFunc]
+	SUBI $T38 x1_otherFunc y1_otherFunc
+	STORE $RET $T38
+	JR
+LABEL $END

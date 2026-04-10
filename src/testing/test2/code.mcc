@@ -1,0 +1,11 @@
+func void main()
+{
+    str playerName;
+    int x, y, z;
+
+    x = 8 * z;
+    y = y + 1;
+    z = z / 2;
+
+    cmd "say HIhowareu";
+}

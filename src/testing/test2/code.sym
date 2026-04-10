@@ -1,0 +1,8 @@
+Symbol Table: GLOBAL
+	BLOCK | Type: VOID  | ID: main
+
+Symbol Table: main
+	EVAL  | Type: STR   | ID: playerName
+	EVAL  | Type: INT   | ID: x
+	EVAL  | Type: INT   | ID: y
+	EVAL  | Type: INT   | ID: z
