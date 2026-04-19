@@ -138,7 +138,7 @@ public class App
             }
         });
 
-        URL url = getClass().getResource("/img/logo.png");
+        URL url = getClass().getResource("../../img/logo.png");
 
         if (url != null)
         {
