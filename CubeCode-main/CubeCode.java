@@ -1,10 +1,10 @@
 import app.App;
 
-public class Main
+public class CubeCode
 {
     public static void main(String[] args)
     {
-        System.out.println(Main.credits());
+        System.out.println(CubeCode.credits());
         (new App()).launch();
     }
 
